@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "title": "Windturbine",
+    "description": "Wind Turbine flat model with hybrid elements ",
+    "type": "object",
+    "required": false,
+    "additionalProperties": false,
+    "properties": {
+        "uri": {
+            "description": "System generated uri which can uniquely identify Wind Turbine",
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "description": "Wind Turbine name",
+            "type": "string",
+            "required": false
+        },
+        "model": {
+            "description": "Description for the domain object - Wind Turbine",
+            "type": "string",
+            "required": false
+        },
+        "parent":{
+            "description": "wind farm reference",
+            "type": "string",
+            "required": false
+        },
+        "manufacture":{
+            "description": "wind turbine manufacture",
+            "type": "string",
+            "required": false
+        },
+        "obsolete": {
+            "description": "Obsolete/non-obsolete Asset",
+            "type": "boolean",
+            "required": true,
+            "default": false
+        },
+        "frequency":{
+            "description": "frequency",
+            "type": "string",
+            "required": false
+        },
+        "power":{
+            "description": "tower model",
+            "type": "string",
+            "required": false
+        },
+        "towerType":{
+            "description": "tower model type",
+            "type": "string",
+            "required": false
+        },
+        "rotorDiameter":{
+            "description": "Rotor Diameter",
+            "type": "number",
+            "required": false
+        },
+        "hubHeight":{
+            "description": "Height of hub",
+            "type": "number",
+            "required": false
+        },
+        "nacelle": {
+            "description": "uri -  including the generator, gearbox, drive train, and brake assembly",
+            "type": "string",
+            "required": false
+        },
+        "bladeType": {
+            "description": "Blade(s) Type",
+            "type": "string",
+            "required": false
+        },
+        "ratedWindSpeed": {
+            "description": "Rated Wind Speed",
+            "type": "string",
+            "required": false
+        },
+        "certification": {
+            "description": "Certification",
+            "type": "string",
+            "required": false
+        },
+        "signature": {
+            "description": "Signature",
+            "type": "string",
+            "required": false
+        },
+        "location": {
+            "description": "map contains lat and long",
+            "javaType": "java.util.LinkedHashMap<String, Double>",
+            "type": "object",
+            "required": false
+        }
+    }
+}

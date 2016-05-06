@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "title": "Windfarm",
+    "description": "Wind farm",
+    "type": "object",
+    "required": false,
+    "additionalProperties": false,
+    "properties": {
+        "uri": {
+            "description": "System generated uri which can uniquely identify Wind Farm",
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "description": "Name",
+            "type": "string",
+            "required": false
+        },
+        "owner": {
+            "description": "Wind farm owner",
+            "type": "string",
+            "required": false
+        },
+        "location": {
+            "description": "map contains lat and long",
+            "javaType": "java.util.LinkedHashMap<String, Double>",
+            "type": "object",
+            "required": false
+        }
+    }
+}

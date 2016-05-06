@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "title": "City",
+    "description": "City DTO",
+    "type": "object",
+    "required": false,
+    "additionalProperties": false,
+    "properties": {
+        "uri": {
+            "description": "System generated uri which can uniquely identify City",
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "description": "City Name",
+            "type": "string",
+            "required": true
+        },
+        "parent": {
+            "description": "country/state/province/county etc uri",
+            "type": "string",
+            "required": false
+        }
+    }
+}

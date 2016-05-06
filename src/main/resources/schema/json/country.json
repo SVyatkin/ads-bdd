@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "title": "Country",
+    "description": "Country DTO",
+    "type": "object",
+    "required": false,
+    "additionalProperties": false,
+    "properties": {
+        "uri": {
+            "description": "System generated uri which can uniquely identify Asset",
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "description": "Country Name",
+            "type": "string",
+            "required": true
+        }
+    }
+}

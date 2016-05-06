@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "title": "Manufacture",
+    "description": "Manufacture",
+    "type": "object",
+    "required": false,
+    "additionalProperties": false,
+    "properties": {
+        "uri": {
+            "description": "System generated uri which can uniquely identify Wind Farm",
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "description": "Name",
+            "type": "string",
+            "required": false
+        },
+        "address": {
+            "description": "Wind farm owner",
+            "type": "string",
+            "required": false
+        }
+    }
+}
