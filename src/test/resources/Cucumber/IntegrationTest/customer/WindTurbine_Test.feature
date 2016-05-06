@@ -20,6 +20,14 @@ Scenario: Create and query Wind Turbine
       | /windturbine/101 | 101 | /windfarm/100 | /manufacture/100 | XLE  | 50/60     | 1.5   | MTS      | 80        | 82.5           | GE40      | 11.5           |               | 37.768     |-121.9605667 | 
       | /windturbine/102 | 102 | /windfarm/100 | /manufacture/100 | XLE  | 50/60     | 1.6   | MTS      | 100       | 82.5           | GE403     | 14             |  IEC 61400-1  | 37.7670002 |-121.9606    |
 
+    When a user queries a list of wind farms _WT_
+    Then a list of wind farms should be returned _WT_
+    | /windfarm/100 |
+    | /windfarm/101 |
+    When a user queries a list of wind turbine manufatures _WT_
+    Then a list of wind turbine manufatures should be returned _WT_
+    | /manufacture/100 |
+    | /manufacture/101 |
     When a user queries a list of wind turbines _WT_
     Then a list of wind turbines should be returned _WT_
     | /windturbine/100 |

@@ -35,7 +35,9 @@ import com.ge.ams.dto.Asset;
 import com.ge.ams.dto.City;
 import com.ge.ams.dto.Country;
 import com.ge.ams.dto.Customer;
+import com.ge.ams.dto.Manufacture;
 import com.ge.ams.dto.State;
+import com.ge.ams.dto.Windfarm;
 import com.ge.ams.dto.Windturbine;
 
 @Component
@@ -151,6 +153,8 @@ public class RestConfig {
 		pathMap.put(Country.class, paths.country);
 		pathMap.put(State.class, paths.state);
 		pathMap.put(City.class, paths.city);
+		pathMap.put(Windfarm.class, paths.windfarm);
+		pathMap.put(Manufacture.class, paths.manufacture);
 		pathMap.put(Windturbine.class, paths.windturbine);
 
 	}
@@ -163,6 +167,8 @@ public class RestConfig {
 		typeReferenceMap.put(Country.class, new TypeReference<List<Country>>() {});
 		typeReferenceMap.put(State.class, new TypeReference<List<State>>() {});
 		typeReferenceMap.put(City.class, new TypeReference<List<City>>() {});
+		typeReferenceMap.put(Manufacture.class, new TypeReference<List<Manufacture>>() {});
+		typeReferenceMap.put(Windfarm.class, new TypeReference<List<Windfarm>>() {});
 		typeReferenceMap.put(Windturbine.class, new TypeReference<List<Windturbine>>() {});
 	}
 
@@ -205,16 +211,20 @@ public class RestConfig {
 	}
 
 	public class Paths {
+		public final String manufacture;
 		public final String prefix;
 		public final String asset;
 		public final String customer;
 		public final String country;
 		public final String city;
 		public final String state;
+		public final String windfarm;
 		public final String windturbine;
 
 		private Paths(String prefix) {
 			this.prefix = prefix;
+			windfarm = prefix + "/windfarm";
+			manufacture = prefix + "/manufacture";
 			windturbine = prefix + "/windturbine";
 			country = prefix + "/countries";
 			city = prefix + "/cities";

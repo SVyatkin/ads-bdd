@@ -27,6 +27,9 @@ import cucumber.api.java.en.When;
 
 public class WTTest extends RestTestBase {
 	List<Windturbine> wt = new ArrayList<Windturbine>();
+	List<Manufacture> manufactures = new ArrayList<Manufacture>();
+	List<Windfarm> windFarms = new ArrayList<Windfarm>();
+	
 	Map<String, Windturbine> mapWTOriginal = new HashMap<String, Windturbine>();
 	Map<String, Windturbine> mapWTProcessed = new HashMap<String, Windturbine>();
 	
@@ -60,6 +63,33 @@ public class WTTest extends RestTestBase {
 		}
 		rest.post(config.paths.prefix + "/windturbine", JsonMapper.toJson(wt));
 	}
+	
+	@When("^a user queries a list of wind farms _WT_$")
+	public void a_user_queries_a_list_of_wind_farms__WT_() throws Throwable {
+		windFarms  = retrieveAll(Windfarm.class, null);
+	}
+
+	@Then("^a list of wind farms should be returned _WT_$")
+	public void a_list_of_wind_farms_should_be_returned__WT_(List<String> wtUris) throws Throwable {
+		Set<String> set = new HashSet<String>();
+		Set<String> set1 = new HashSet<String>(wtUris);
+		for (Windfarm w : this.windFarms) set.add(w.getUri());
+		Assert.isTrue(set.containsAll(set1));
+	}
+
+	@When("^a user queries a list of wind turbine manufatures _WT_$")
+	public void a_user_queries_a_list_of_wind_turbine_manufatures__WT_() throws Throwable {
+		manufactures  = retrieveAll(Manufacture.class, null);
+	}
+
+	@Then("^a list of wind turbine manufatures should be returned _WT_$")
+	public void a_list_of_wind_turbine_manufatures_should_be_returned__WT_(List<String> wtUris) throws Throwable {
+		Set<String> set = new HashSet<String>();
+		Set<String> set1 = new HashSet<String>(wtUris);
+		for (Manufacture w : this.manufactures) set.add(w.getUri());
+		Assert.isTrue(set.containsAll(set1));
+	}
+
 	
 	@When("^a user queries a list of wind turbines _WT_$")
 	public void a_user_queries_a_list_of_wind_turbines__WT_() throws Throwable {
@@ -256,6 +286,9 @@ class WWindturbine extends Windturbine {
 		Windturbine windTurbine = new Windturbine();
 		windTurbine.setLocation(location);
 		windTurbine.setUri(getUri());
+		windTurbine.setName(getName());
+		windTurbine.setParent(getParent());
+		windTurbine.setManufacture(getManufacture());
 		windTurbine.setModel(getModel());
 		windTurbine.setFrequency(getFrequency());
 		windTurbine.setPower(getPower());
