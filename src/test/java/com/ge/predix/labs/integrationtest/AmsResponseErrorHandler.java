@@ -19,7 +19,7 @@ public class AmsResponseErrorHandler extends DefaultResponseErrorHandler {
         Charset charset = contentType != null ? contentType.getCharSet() : null;
         String body = null;
         try {
-         body = IOUtil.toString(response.getBody(), "UTF-8");
+         body = IOUtils.toString(response.getBody(), "UTF-8");
         } catch (IOException e) {
         	//ignore
         }
