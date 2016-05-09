@@ -1,7 +1,7 @@
 Feature: Support to create/update/delete Open Model Asset Data Service (ADS) based on Wind Farm and Turbines
   As an ADS Modeler,
   I am able to create/update/delete model elements and query using Graph Expression Language
- @RunJustThisTest
+# @RunJustThisTest
 Scenario: Create and query Wind Turbine 
 
    Given the wind farms table _WT_

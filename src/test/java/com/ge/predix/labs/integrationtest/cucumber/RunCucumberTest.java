@@ -12,7 +12,7 @@ if you want to run one feature only,
 annotate your feature file with @RunJustThisTest and un-comment this line
 
  **/
-tags = { "@RunJustThisTest" },
+//tags = { "@RunJustThisTest" },
 dryRun = false)
 public class RunCucumberTest {
 
