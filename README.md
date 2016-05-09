@@ -2,7 +2,7 @@
 
 #### Predix example Java BDD Cucumber tests
 
-- please clone a project [PredixDev/predix-bdd-cucumber ](https://github.com/PredixDev/predix-bdd-cucumber) 
+- please clone a project [SVyatkin/ads-bdd ](https://github.com/SVyatkin/ads-bdd) 
 
 - run BDD tests from command line 
 
