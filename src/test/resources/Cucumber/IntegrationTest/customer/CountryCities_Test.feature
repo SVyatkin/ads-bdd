@@ -1,4 +1,4 @@
-Feature: Support to create/update/delete Open Model Asset Data Service (ADS) based on Country/States/Cities hieraclely 
+Feature: Support to create/update/delete Open Model Asset Data Service (ADS) based on Country/States/Cities hierarchy 
   As an ADS Modeler,
   I am able to create/update/delete model elements and query using Graph Expression Language
 
